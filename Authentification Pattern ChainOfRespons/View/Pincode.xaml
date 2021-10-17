@@ -1,0 +1,40 @@
+﻿<Window x:Class="Authentification_Pattern_ChainOfRespons.View.Pincode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Authentification_Pattern_ChainOfRespons.View"
+        mc:Ignorable="d"
+        Title="Pincode" Height="150" Width="200" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Run">
+                <Setter Property="FontSize" Value="13"/>
+            </Style>
+        </Grid.Resources>
+        <StackPanel Grid.Row="1">
+            <TextBlock>
+            <Run Text="Hello"/>
+            <Run x:Name="userLogin" Text="name"/>
+            <Run Text="!"/>
+            </TextBlock>
+            <TextBlock>
+            <Run Text="Enter your pin code: "/>
+            <PasswordBox x:Name="PincodePassBox" Height="20" Width="50" FontSize="14" MaxLength="4" PreviewTextInput="PasswordBox_PreviewTextInput"/>
+            </TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Enter" Grid.Column="2" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+</Window>
